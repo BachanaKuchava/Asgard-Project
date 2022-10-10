@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title> Asgard </title>
+    <link rel="stylesheet" href="about us.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myModule">
+    <div class="banner">
+        <div class="navbar">
+            <img src="img/logo.png" class="logo">
+            <ul>
+                <li> <a href="../index.html"> Home </a></li>
+                <li> <a href="#"> About Us </a></li>
+                <li> <a href="../classes/classes.html"> Classes </a></li>
+                <li> <a href="../shop/shop.html"> Shop With Us </a></li>
+                <li> <a href="../contacts/contacts.html"> Contacts </a></li>
+            </ul>
+        </div> 
+    
+
+    <div class="table-box">
+        <div class="table-row table-head">
+            <div class="table-cell first-cell">
+                <p>ASGARD Classes And Prices </p>
+            </div>
+            <div class="table-cell">
+                <p>Prices</p>
+            </div>
+            <div class="table-cell last-cell">
+                <p>Videos Of Our Trainings</p>
+            </div> 
+        </div>
+
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Fitness Card 24/7 30 Days</p>
+            </div>
+            <div class="table-cell">
+                <p>247$</p>
+            </div>
+            <div class="table-cell last-cell">
+                <a href="https://youtube.com/">Our Fitness</a>
+            </div>   
+        </div>
+
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Boxing Classes 30 Days</p>
+            </div>
+            <div class="table-cell">
+                <p>137$</p>
+            </div>
+            <div class="table-cell last-cell">
+                <a href="https://youtube.com/">Boxing Classes</a>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Yoga 30 Days</p>
+            </div>
+            <div class="table-cell">
+                <p>188$</p>
+            </div>
+            <div class="table-cell last-cell">
+                <a href="https://youtube.com/">Yoga Classes</a>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Spinning Classes 30 Days </p>
+            </div>
+            <div class="table-cell">
+                <p>123$</p>
+            </div>
+            <div class="table-cell last-cell">
+                <a href="https://youtube.com/">Sppining Training</a>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Anatomy Classes 30 Days</p>
+            </div>
+            <div class="table-cell">
+                <p>455$</p>
+            </div>
+            <div class="table-cell last-cell">
+                <a href="https://www.youtube.com/">Anatomy Classes</a>
+            </div>
+        </div>
+
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Pool</p>
+            </div>
+            <div class="table-cell">
+                <p>126$</p>
+            </div>
+            <div class="table-cell last-cell">
+                <a href="https://www.youtube.com/">Our Pool</a>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Pool Lesons for kids</p>
+            </div>
+            <div class="table-cell">
+                <p>256$</p>
+            </div>
+            <div class="table-cell last-cell">
+                <a href="https://www.youtube.com/">Kids lessons</a>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Massage 1 Seasion</p>
+            </div>
+            <div class="table-cell">
+                <p>68$</p>
+            </div>
+            <div class="table-cell last-cell">
+                <a href="https://www.youtube.com/">Massage</a>
+            </div>
+        </div>
+<br> <br> <br> <br>
+        <div class="filtri">
+            <div ng-controller="myController">
+            <font color="gold">    Search : </font><input type="text" placeholder="Search Employees" ng-model="searchText" />
+                <br> <br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Price</th>
+                            <th>Hours</th>
+                            <th>Days</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="employee in employees | filter: searchText">
+                            <td> {{ employee.name }} </td>
+                            <td> {{ employee.gender }} </td>
+                            <td> {{ employee.price }} </td>
+                            <td> {{ employee.hours }} </td>
+                            <td> {{employee.days}} </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</div>   
+</div>
+
+<br> <br> <br> <br> <br> <br>
+<br> <br> <br> <br> <br> <br> <br> <br> 
+<br> <br> <br> <br> 
+<br> <br> <br> <br> 
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Contacts</h4>
+                <ul>
+                    <li><a href="#">kuchavabachana1@gmail.com</a></li>
+                    <li><a href="#">+995 571 740 110</a></li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Programs</h4>
+                <ul>
+                    <li><a href="#">Fitness</a></li>
+                    <li><a href="#">Boxing</a></li>
+                    <li><a href="#">Yoga</a></li>
+                    <li><a href="#">Crossfit</a></li>
+                    <li><a href="#">Massage</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Online Shop</h4>
+                <ul>
+                    <li><a href="#">Gym Aquipment</a></li>
+                    <li><a href="#">Boxing Aquipment</a></li>
+                    <li><a href="#">UniForms</a></li>
+                    <li><a href="#">Food Supllyments</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script> 
+var app = angular
+    .module("myModule", [])
+    .controller("myController", function($scope) {
+        var employees = [
+            { name: "Ben", gender: "Male", price: 550, hours: "2", days: "Monday - Wednesday"},
+           { name: "Denise", gender: "Female", price: 400, hours: "1.5", days: "wednesday - friday"},
+           { name: "Mark", gender: "Male", price: 600, hours: "2.5", days: "Sunday - Monday"},
+           { name: "Susan", gender: "Female", price: 530, hours: "2", days: "Thurstday - Monday"},
+           { name: "Antony", gender: "Male", price: 250, hours: "1", days: "Saturday - Thirstday"},
+        ];
+        $scope.employees = employees;   
+    });
+
+</script>
+</body>
+</html>
